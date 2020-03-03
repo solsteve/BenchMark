@@ -1,28 +1,21 @@
 C ===== BEGIN FILE =============================================================
-C **                        P R O P R I E T A R Y                             **
-C ==============================================================================
 C **                                                                          **
 C **  COPYRIGHT (C) 2007, STEPHEN W. SOLIDAY                                  **
 C **                      STEPHEN@SOLIDAY.COM                                 **
 C **                      HTTP://WWW.SOLIDAY.COM/STEPHEN                      **
 C **                                                                          **
-C **  THIS FILE, AND THE ASSOCIATED ALGORITHMS, ARE NOT FREE SOFTWARE; YOU    ** 
-C **  MAY NOT REDISTRIBUTE THEM AND/OR MODIFY THEM. THESE ALGORITHMS WERE     **
-C **  DEVELOPED AND IMPLEMENTED FOR THE PURPOSE OF AN INTERNAL ASSESSMENT AND **
-C **  HAVE, AS YET, NOT BEEN PUBLICLY DISTRIBUTED. DEVELOPMENT OF THESE       **
-C **  ALGORITHMS HAVE BEEN AT THE SOLE COST IN BOTH TIME AND FUNDING BY THEIR ** 
-C **  AUTHOR. UNTIL SUCH A PUBLIC RELEASE IS MADE, THE AUTHOR RETAINS ALL     **
-C **  RIGHTS TO THESE ALGORITHMS. IT IS EXPECTED THAT IF THIS PROGRAM OR ANY  **
-C **  OF THE ALGORITHMS CONTAINED HEREIN ARE DEEMED RELEASABLE THEY WILL BE   **
-C **  RELEASED UNDER THE GNU PUBLIC LICENSE FOR NON-COMMERCIAL USE AND/OR     **
-C **  WITH RESTRICTED RIGHTS FOR GOVERNMENT USE. AT THAT TIME EACH SOURCE     **
-C **  FILE WILL CONTAIN EITHER/BOTH THE STANDARD GPL STATEMENT/DISCLAIMER,    **
-C **  AND/OR THE DFARS RESTRICTED RIGHTS LEGEND.                              **
+C **  THIS PROGRAM IS FREE SOFTWARE: YOU CAN REDISTRIBUTE IT AND/OR MODIFY    **
+C **  IT UNDER THE TERMS OF THE GNU GENERAL PUBLIC LICENSE AS PUBLISHED BY    **
+C **  THE FREE SOFTWARE FOUNDATION, EITHER VERSION 3 OF THE LICENSE, OR       **
+C **  (AT YOUR OPTION) ANY LATER VERSION                                      **
 C **                                                                          **
-C **  THESE ALGORITHMS EXISTS AT THE PRESENT TIME WITHOUT ANY WARRANTY;       **
-C **  WITHOUT EVEN THE IMPLIED WARRANTY OF MERCHANTABILITY OR FITNESS FOR A   **
-C **  PARTICULAR PURPOSE. AS YOU ARE NOT SUPPOSED TO BE IN POSSESSION OF THIS **
-C **  FILE IF YOU USE IT, YOU DO SO AT YOUR OWN RISK.                         **
+C **  THIS PROGRAM IS DISTRIBUTED IN THE HOPE THAT IT WILL BE USEFUL, BUT     **
+C **  WITHOUT ANY WARRANTY; WITHOUT EVEN THE IMPLIED WARRANTY OF              **
+C **  MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. SEE THE            **
+C **  GNU GENERAL PUBLIC LICENSE FOR MORE DETAILS.                            **
+C **                                                                          **
+C **  YOU SHOULD HAVE RECEIVED A COPY OF THE GNU GENERAL PUBLIC LICENSE       **
+C **  ALONG WITH THIS PROGRAM. IF NOT, SEE <HTTP://WWW.GNU.ORG/LICENSES/>.    **
 C **                                                                          **
 C **  ----- MODIFICATION HISTORY -------------------------------------------- **
 C **                                                                          **
@@ -53,6 +46,4 @@ C----+==================================================================--------
       RETURN
       END
 
-C ==============================================================================
-C **                        P R O P R I E T A R Y                             **
 C =============================================================== END FILE =====

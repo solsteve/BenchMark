@@ -1,28 +1,21 @@
 C ===== BEGIN FILE =============================================================
-C **                        P R O P R I E T A R Y                             **
-C ==============================================================================
 C **                                                                          **
 C **  COPYRIGHT (C) 2007, STEPHEN W. SOLIDAY                                  **
 C **                      STEPHEN@SOLIDAY.COM                                 **
 C **                      HTTP://WWW.SOLIDAY.COM/STEPHEN                      **
 C **                                                                          **
-C **  THIS FILE, AND THE ASSOCIATED ALGORITHMS, ARE NOT FREE SOFTWARE; YOU    **
-C **  MAY NOT REDISTRIBUTE THEM AND/OR MODIFY THEM. THESE ALGORITHMS WERE     **
-C **  DEVELOPED AND IMPLEMENTED FOR THE PURPOSE OF AN INTERNAL ASSESSMENT AND **
-C **  HAVE, AS YET, NOT BEEN PUBLICLY DISTRIBUTED. DEVELOPMENT OF THESE       **
-C **  ALGORITHMS HAVE BEEN AT THE SOLE COST IN BOTH TIME AND FUNDING BY THEIR **
-C **  AUTHOR. UNTIL SUCH A PUBLIC RELEASE IS MADE, THE AUTHOR RETAINS ALL     **
-C **  RIGHTS TO THESE ALGORITHMS. IT IS EXPECTED THAT IF THIS PROGRAM OR ANY  **
-C **  OF THE ALGORITHMS CONTAINED HEREIN ARE DEEMED RELEASABLE THEY WILL BE   **
-C **  RELEASED UNDER THE GNU PUBLIC LICENSE FOR NON-COMMERCIAL USE AND/OR     **
-C **  WITH RESTRICTED RIGHTS FOR GOVERNMENT USE. AT THAT TIME EACH SOURCE     **
-C **  FILE WILL CONTAIN EITHER/BOTH THE STANDARD GPL STATEMENT/DISCLAIMER,    **
-C **  AND/OR THE DFARS RESTRICTED RIGHTS LEGEND.                              **
+C **  THIS PROGRAM IS FREE SOFTWARE: YOU CAN REDISTRIBUTE IT AND/OR MODIFY    **
+C **  IT UNDER THE TERMS OF THE GNU GENERAL PUBLIC LICENSE AS PUBLISHED BY    **
+C **  THE FREE SOFTWARE FOUNDATION, EITHER VERSION 3 OF THE LICENSE, OR       **
+C **  (AT YOUR OPTION) ANY LATER VERSION                                      **
 C **                                                                          **
-C **  THESE ALGORITHMS EXISTS AT THE PRESENT TIME WITHOUT ANY WARRANTY;       **
-C **  WITHOUT EVEN THE IMPLIED WARRANTY OF MERCHANTABILITY OR FITNESS FOR A   **
-C **  PARTICULAR PURPOSE. AS YOU ARE NOT SUPPOSED TO BE IN POSSESSION OF THIS **
-C **  FILE IF YOU USE IT, YOU DO SO AT YOUR OWN RISK.                         **
+C **  THIS PROGRAM IS DISTRIBUTED IN THE HOPE THAT IT WILL BE USEFUL, BUT     **
+C **  WITHOUT ANY WARRANTY; WITHOUT EVEN THE IMPLIED WARRANTY OF              **
+C **  MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. SEE THE            **
+C **  GNU GENERAL PUBLIC LICENSE FOR MORE DETAILS.                            **
+C **                                                                          **
+C **  YOU SHOULD HAVE RECEIVED A COPY OF THE GNU GENERAL PUBLIC LICENSE       **
+C **  ALONG WITH THIS PROGRAM. IF NOT, SEE <HTTP://WWW.GNU.ORG/LICENSES/>.    **
 C **                                                                          **
 C **  ----- MODIFICATION HISTORY -------------------------------------------- **
 C **                                                                          **
@@ -120,11 +113,10 @@ C     ------------------------------------------------------------------
       DOUBLE PRECISION DX23,DY23,DX24,DY24,DX34,DY34
       DOUBLE PRECISION V2,CC
 C     ------------------------------------------------------------------
-      INTEGER IVX1,IVY1,IX1,IY1,IVX2,IVY2,IX2,IY2,IVX3,IVY3,IX3,IY3
-      INTEGER IVX4,IVY4,IX4,IY4,JG,JM1,JR1,JM2,JR2,JM3,JR3,JM4,JR4,NN
-      PARAMETER (IVX1=1,IVY1=2,IX1=3,IY1=4,IVX2=5,IVY2=6,IX2=7,IY2=8,
-     1     IVX3=9,IVY3=10,IX3=11,IY3=12,IVX4=13,IVY4=14,IX4=15,IY4=16,
-     2     JG=1,JM1=2,JR1=3,JM2=4,JR2=5,JM3=6,JR3=7,JM4=8,JR4=9,NN=4)
+      INTEGER IX1,IY1,IX2,IY2,IX3,IY3
+      INTEGER IVX4,IVY4,IX4,IY4,JR1,JR2,JR3,JR4
+      PARAMETER (IX1=3,IY1=4,IX2=7,IY2=8,JR1=3,JR2=5,JR3=7,JR4=9,
+     1     IX3=11,IY3=12,IVX4=13,IVY4=14,IX4=15,IY4=16)
 C     ------------------------------------------------------------------
       DOUBLE PRECISION MAXT,DELTATIME,ACC
       INTEGER ISTEP
@@ -255,10 +247,10 @@ C     ------------------------------------------------------------------
       DOUBLE PRECISION G,TT,SUMX,SUMY
 C     ------------------------------------------------------------------
       INTEGER IVX1,IVY1,IX1,IY1,IVX2,IVY2,IX2,IY2,IVX3,IVY3,IX3,IY3
-      INTEGER IVX4,IVY4,IX4,IY4,JG,JM1,JR1,JM2,JR2,JM3,JR3,JM4,JR4,NN
+      INTEGER IVX4,IVY4,IX4,IY4,JG,JM1,JM2,JM3,JM4,NN
       PARAMETER (IVX1=1,IVY1=2,IX1=3,IY1=4,IVX2=5,IVY2=6,IX2=7,IY2=8,
      1     IVX3=9,IVY3=10,IX3=11,IY3=12,IVX4=13,IVY4=14,IX4=15,IY4=16,
-     2     JG=1,JM1=2,JR1=3,JM2=4,JR2=5,JM3=6,JR3=7,JM4=8,JR4=9,NN=4)
+     2     JG=1,JM1=2,JM2=4,JM3=6,JM4=8,NN=4)
 C     ------------------------------------------------------------------
       INTEGER DONE,ICOUNT
       DOUBLE PRECISION TCOUNT
@@ -343,10 +335,10 @@ C----+==================================================================--------
       DIMENSION PARAM(16),STATE(32)
 C     ------------------------------------------------------------------
       INTEGER IVX1,IVY1,IX1,IY1,IVX2,IVY2,IX2,IY2,IVX3,IVY3,IX3,IY3
-      INTEGER IVX4,IVY4,IX4,IY4,JG,JM1,JR1,JM2,JR2,JM3,JR3,JM4,JR4,NN
+      INTEGER IVX4,IVY4,IX4,IY4,JG,JM1,JR1,JM2,JR2,JM3,JR3,JM4,JR4
       PARAMETER (IVX1=1,IVY1=2,IX1=3,IY1=4,IVX2=5,IVY2=6,IX2=7,IY2=8,
      1     IVX3=9,IVY3=10,IX3=11,IY3=12,IVX4=13,IVY4=14,IX4=15,IY4=16,
-     2     JG=1,JM1=2,JR1=3,JM2=4,JR2=5,JM3=6,JR3=7,JM4=8,JR4=9,NN=4)
+     2     JG=1,JM1=2,JR1=3,JM2=4,JR2=5,JM3=6,JR3=7,JM4=8,JR4=9)
 C     ------------------------------------------------------------------
       DOUBLE PRECISION MAXT,DELTATIME,ACC
       DOUBLE PRECISION M1,M2,M3,M4,R1,R2,R3,R4
@@ -463,6 +455,4 @@ C     ------------------------------------------------------------------
  1070 FORMAT('BURN    ',D13.6)
 C     ------------------------------------------------------------------
       END
-C ==============================================================================
-C **                        P R O P R I E T A R Y                             **
 C =============================================================== END FILE =====
