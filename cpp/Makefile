@@ -153,10 +153,10 @@ $(OBJ)/bench.o:   $(SRC)/bench.cc   $(INC)/rk4.hh $(INC)/psgraph.hh $(INC)/based
 
 #/ ==========================================================================================
 
-test: test.ps
+test: ../test-cpp.ps
 	PSView $<
 
-test.ps: $(BIN)/bench
+../test-cpp.ps: $(BIN)/bench
 	time $< $@
 
 test3: test3.ps

@@ -152,11 +152,11 @@ $(OBJ)/bench.o:   $(SRC)/bench.f   $(INC)/rk4.f $(INC)/basedef.f
 
 #/ ==========================================================================================
 
-test: test.ps
+test: ../test-f77.ps
 	PSView $<
 
-test.ps: $(BIN)/bench
-	$< > $@
+../test-f77.ps: $(BIN)/bench
+	time $< > $@
 
 test3: test3.ps
 	PSView $<

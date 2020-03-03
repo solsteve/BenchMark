@@ -36,7 +36,7 @@
 
 #define MAXT       ((double)  1200.0)                /**< Time in days of plot                */
 #define DELTATIME  ((double) 21600.0)                /**< Delta Time (seconds) between plots  */
-#define ISTEP      ((int)      3600)                  /**< Number of Steps per Plot            */
+#define ISTEP      ((int)      360)                  /**< Number of Steps per Plot            */
 
 /* ------------------------------------------------------------------------------------------ */
 

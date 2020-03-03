@@ -59,7 +59,7 @@ C     ------------------------------------------------------------------
 C     ------------------------------------------------------------------
       DATA MAXT/1200.0/
       DATA DELTATIME/21600.0/
-      DATA ISTEP/3600/
+      DATA ISTEP/360/
       DATA M1/1.988435D+30/
       DATA M2/1.899D+27/
       DATA M3/5.9742D+24/
@@ -174,7 +174,7 @@ C
          V2=(Q(IVX4)*Q(IVX4))+(Q(IVY4)*Q(IVY4))
          IF (V2.LT.1.0D+9) THEN
             CC=DSQRT(V2)
-            WRITE(0,*) Q(IX4),Q(IY4),Q(IVX4),Q(IVY4)
+C           WRITE(0,*) Q(IX4),Q(IY4),Q(IVX4),Q(IVY4)
             Q(IVX4)=Q(IVX4)+(ACC*Q(IVX4)/CC)
             Q(IVY4)=Q(IVY4)+(ACC*Q(IVY4)/CC)
             ICOUNT=ICOUNT+1

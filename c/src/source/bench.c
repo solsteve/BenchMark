@@ -126,7 +126,7 @@ int CHECK( double *Q, double t, double *P ) {
     double v2 = (Q[iVX4]*Q[iVX4]) + (Q[iVY4]*Q[iVY4]);
     if (v2 < 1.0e+9) {
       double cc = sqrt(v2);
-      fprintf( stdout, "%13.6e %13.6e %13.6e %13.6e\n", Q[iX4], Q[iY4], Q[iVX4], Q[iVY4]);
+      /* fprintf( stdout, "%13.6e %13.6e %13.6e %13.6e\n", Q[iX4], Q[iY4], Q[iVX4], Q[iVY4]); */
       Q[iVX4] += Acc*Q[iVX4]/cc;
       Q[iVY4] += Acc*Q[iVY4]/cc;
       iCount++;
@@ -195,7 +195,9 @@ void DIFEQ( double *Qd, double *Q, double t, double *P ) {
     for (k=1; k<NN; k++) {
       for (i=0; i<k; i++) {
 	double tt =  (dx[k][i]*dx[k][i]) + (dy[k][i]*dy[k][i]);
-	DEN[i][k] = (DEN[k][i] = POWER(tt,-1.5));
+	DEN[k][i] = pow(tt,-1.5);
+	/*DEN[k][i] = exp(-1.5*log(tt));*/
+	DEN[i][k] =  DEN[k][i];
       }
     }
 

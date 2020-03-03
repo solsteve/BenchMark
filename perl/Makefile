@@ -53,22 +53,23 @@ fullclean: clean
 
 #/ ------------------------------------------------------------------------------------------
 ptest:
-	perl ptest.pl
+	perl -I. ptest.pl
 	PSView psgraph.ps
 
 rtest:
-	perl rtest.pl
+	perl -I. rtest.pl
 	PSView psgraph.ps
 
 
 test:
-	perl bench.pl
-	PSView psgraph.ps
+	time perl -I. bench.pl
+	mv psgraph.ps ../test-perl.ps
+	PSView ../test-perl.ps
 
 bench:
 	@sync
 	@date
-	@time perl bench.pl > /dev/null 2> /dev/null
+	@time perl -I. bench.pl > /dev/null 2> /dev/null
 	@sync
 	@date
 

@@ -74,8 +74,8 @@ rtest: all
 
 #/ ------------------------------------------------------------------------------------------
 test: all
-	time java -cp ./build/lib/Benchmark.jar com.soliday.apps.benchmark.Bench test.ps
-	PSView test.ps
+	time java -cp ./build/lib/Benchmark.jar com.soliday.apps.benchmark.Bench ../test-java.ps
+	PSView ../test-java.ps
 
 bench: all
 	@sync

@@ -9,7 +9,18 @@ all:
 	make -C java    $@
 	make -C perl    $@
 	make -C python  $@
-	make -C math    $@
+#	make -C math    $@
+
+#/ --------------------------------------------------------------------------
+
+bench:
+	make -C c       $@
+	make -C cpp     $@
+	make -C fortran $@
+	make -C java    $@
+	make -C perl    $@
+	make -C python  $@
+#	make -C math    $@
 
 #/ --------------------------------------------------------------------------
 clean:
@@ -30,6 +41,6 @@ fullclean: clean
 	make -C perl    $@
 	make -C python  $@
 	make -C math    $@
-	rm -f *~ data/*~
+	rm -f test-*.ps *~ data/*~
 
 #/ ==========================================================================

@@ -77,7 +77,7 @@ static double Acc    = AccInc*9.81*7.0;
 // ------------------------------------------------------------------------------------------
 class Motion :public RK4 {
   // ----------------------------------------------------------------------------------------
-private:
+ private:
   double dx[NN][NN];
   double dy[NN][NN];
 
@@ -91,7 +91,7 @@ private:
 
   double m[NN];
 
-public:
+ public:
 
   int done;
 
@@ -133,7 +133,7 @@ void Motion::DIFEQ( double *Qd, double *Q, double t, double *P ) {
     m[2] = P[jM3];
     m[3] = P[jM4];
 
-  // ----------------------------------------------------------------------------------------
+    // ----------------------------------------------------------------------------------------
 
     for (int k=1; k<NN; k++) {
       for (int i=0; i<k; i++) {
@@ -144,7 +144,7 @@ void Motion::DIFEQ( double *Qd, double *Q, double t, double *P ) {
       }
     }
 
-  // ----------------------------------------------------------------------------------------
+    // ----------------------------------------------------------------------------------------
 
     for (int k=1; k<NN; k++) {
       for (int i=0; i<k; i++) {
@@ -155,7 +155,7 @@ void Motion::DIFEQ( double *Qd, double *Q, double t, double *P ) {
       }
     }
 
-  // ----------------------------------------------------------------------------------------
+    // ----------------------------------------------------------------------------------------
 
     for (int i=0; i<NN; i++) {
       double sumx = 0.0;
@@ -171,7 +171,7 @@ void Motion::DIFEQ( double *Qd, double *Q, double t, double *P ) {
       ydd[i] = G*sumy;
     }
 
-  // ----------------------------------------------------------------------------------------
+    // ----------------------------------------------------------------------------------------
 
     Qd[iVX1] = xdd[0];
     Qd[iVX2] = xdd[1];
@@ -251,8 +251,8 @@ int Motion::CHECK( double *Q, double t, double *P ) {
     double v2 = (Q[iVX4]*Q[iVX4]) + (Q[iVY4]*Q[iVY4]);
     if (v2 < 1.0e+9) {
       double cc = sqrt(v2);
-      fprintf( stderr, "%11.1f : %13.6e %13.6e : %13.6e %13.6e : %13.6e %13.6e\n",
-	       t, Q[iX4], Q[iY4], Q[iVX4], Q[iVY4], Acc, cc );
+      //fprintf( stderr, "%11.1f : %13.6e %13.6e : %13.6e %13.6e : %13.6e %13.6e\n",
+      //	       t, Q[iX4], Q[iY4], Q[iVX4], Q[iVY4], Acc, cc );
       
       Q[iVX4] += Acc*Q[iVX4]/cc;
       Q[iVY4] += Acc*Q[iVY4]/cc;
@@ -334,13 +334,13 @@ int main( int argc, char *argv[] ) {
     t = MM->integrate( state, t, t+DELTATIME, ISTEP, param );
 
     //fprintf( stdout,
-    //	   "%11.1f %13.6e %13.6e %13.6e %13.6e\n",
-    //	   t, state[iX4], state[iY4], state[iVX4], state[iVY4] );
+    //         "%11.1f %13.6e %13.6e %13.6e %13.6e\n",
+    //         t, state[iX4], state[iY4], state[iVX4], state[iVY4] );
 
-//    PSG->drawLine( x1, y1, state[iX1],  state[iY1]);
-//    PSG->drawLine( x2, y2, state[iX2],  state[iY2]);
-//    PSG->drawLine( x3, y3, state[iX3],  state[iY3]);
-//    PSG->drawLine( x4, y4, state[iX4],  state[iY4]);
+    PSG->drawLine( x1, y1, state[iX1],  state[iY1]);
+    PSG->drawLine( x2, y2, state[iX2],  state[iY2]);
+    PSG->drawLine( x3, y3, state[iX3],  state[iY3]);
+    PSG->drawLine( x4, y4, state[iX4],  state[iY4]);
 
     x1 = state[iX1]; y1 = state[iY1];
     x2 = state[iX2]; y2 = state[iY2];
@@ -369,9 +369,6 @@ int main( int argc, char *argv[] ) {
   fprintf( stdout, "Count   %d\n", iCount);
   fprintf( stdout, "Burn    %6.2f  seconds\n", tCount );
   fprintf( stdout, "Elapsed %9.6f  seconds\n", elapsed );
-
-
-  fprintf( stdout, "CLOCKS_PER_SEC1 %ld", CLOCKS_PER_SEC );
 
   return 0;
 }

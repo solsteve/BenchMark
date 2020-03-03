@@ -35,6 +35,9 @@
 
 SHELL      = /bin/sh
 
+PYTH=python2.7
+
+
 #/ ==========================================================================================
 
 all:
@@ -56,43 +59,43 @@ fullclean: clean
 #/ ------------------------------------------------------------------------------------------
 
 ptest:
-	python -O ptest.py ptest.ps
+	$(PYTH) -O ptest.py ptest.ps
 	PSView ptest.ps
 
 rtest:
-	python rktest.py rktest.ps
+	$(PYTH) rktest.py rktest.ps
 	PSView rktest.ps
 
 
 test:
-	python -O bench.py psgraph.ps
-	PSView psgraph.ps
+	$(PYTH) -O bench.py ../test-python.ps
+	PSView ../test-python.ps
 
 bench1:
 	@sync
 	@date
-	@time python bench.py psgraph1.ps > /dev/null 2> /dev/null
+	@time $(PYTH) bench.py psgraph1.ps > /dev/null 2> /dev/null
 	@sync
 	@date
 
 bench2:
 	@sync
 	@date
-	@time python ctest.py psgraph2.ps > /dev/null 2> /dev/null
+	@time $(PYTH) ctest.py psgraph2.ps > /dev/null 2> /dev/null
 	@sync
 	@date
 
 bench3:
 	@sync
 	@date
-	@time python -O ctest.py psgraph3.ps > /dev/null 2> /dev/null
+	@time $(PYTH) -O ctest.py psgraph3.ps > /dev/null 2> /dev/null
 	@sync
 	@date
 
 bench:
 	@sync
 	@date
-	@time python bench.py psgraph.ps > /dev/null 2> /dev/null
+	@time $(PYTH) bench.py psgraph.ps > /dev/null 2> /dev/null
 	@sync
 	@date
 
