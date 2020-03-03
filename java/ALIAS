@@ -1,0 +1,9 @@
+
+
+   alias TEST="java -jar ./build/lib/Benchmark.jar"
+   alias TEST2="java -cp ./build/lib/Benchmark.jar com.soliday.lib.util.TestTerminal"
+   alias TEST3="java -cp ./build/lib/Benchmark.jar com.soliday.lib.util.EntryPanelTest"
+   alias PTEST="java -cp ./build/lib/Benchmark.jar com.soliday.lib.util.PSGraph"
+   alias RTEST="java -cp ./build/lib/Benchmark.jar com.soliday.apps.benchmark.test.RKTest"
+   alias BENCH="java -cp ./build/lib/Benchmark.jar com.soliday.apps.benchmark.Bench"
+

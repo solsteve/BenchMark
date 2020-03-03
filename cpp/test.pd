@@ -1,0 +1,44 @@
+%!PS-Adobe-3.0
+%%Title: test.pd
+%%Creator: PSGraph
+%%Orientation: Landscape
+%%%%Pages: 1
+%%BoundingBox: 0 0 612 792
+%%DocumentPaperSizes: Letter
+%%BeginSetup
+[{
+%%BeginFeature: *PageRegion Letter
+<</PageSize [612 792]>> setpagedevice
+%%EndFeature
+} stopped cleartomark
+%%EndSetup
+%%Magnification: 1.0000
+%%EndComments
+
+%%BeginProlog
+/dl { newpath moveto lineto stroke } bind def
+/dr { newpath rectstroke } bind def
+/dc { newpath 0 360 arc closepath stroke } bind def
+%EndProlog
+
+%%Page: 1 1
+
+gsave
+
+0 setlinewidth
+
+576 162 translate 90 rotate
+
+0 0 540 540 dr
+
+540 1.2e+12 div 540 1.2e+12 div scale 3e+11 2.5e+11 translate
+
+1.953e+08 -5.89476e+08 6.95e+08 dc
+-2.03974e+11 7.60704e+11 6.99248e+07 dc
+5.53814e+09 1.50182e+11 6.371e+06 dc
+-7.7543e+11 2.34965e+12 1.73715e+06 dc
+grestore
+showpage
+
+%%Trailer
+%%EOF
